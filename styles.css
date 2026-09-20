@@ -1,5 +1,5 @@
 
-/* Navigation Bar background */
+/* Background */
 body {
   background-color: #ffffff;
 }
@@ -23,8 +23,9 @@ body {
 
 /* Logo Image */
 .logo img {
-  height: 55px;       
-  width: auto;         
+  max-width: 100%;
+  height: auto;       
+  width: 200px;         
   display: block;
 }
 
@@ -63,8 +64,9 @@ body {
 /* Right Side Wrap (Links + Cart) */
 .nav-right {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 35px;
+  gap: 50px;
 }
 
 /* Navigation Menu Links */
@@ -108,6 +110,59 @@ body {
 
 .cart-btn:hover {
   background-color: #4F7395;
+}
+
+
+/* Footer Container */
+.homeFooterNav {
+  display: flex;
+  align-items: center;
+  
+  padding: 15px 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  max-width: 100%;
+}
+
+/* Footer Logo */
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+
+.footerLogo img {
+  height: auto;       
+  width: 200px;  
+  border-bottom: 1px solid #e0e0e0;      
+}
+
+/* Footer Links */
+.footerNavLinks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.footerNavCol {
+  flex: 1;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.navListItem a {
+  text-decoration: none;
+  color: #9e9e9e;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.navListItem a:hover {
+  color: #555555;
 }
 
 /* Responsive Media Query for Tablets */
