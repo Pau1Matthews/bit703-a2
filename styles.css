@@ -1,17 +1,12 @@
 
-/* Background */
-body {
-  background-color: #ffffff;
-}
-
 /* Main Navigation Bar Container */
 .topnav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 15px 40px;
+  padding: 5px;
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 /* Logo Container */
@@ -113,14 +108,14 @@ body {
 }
 
 
-/* Footer Container */
+/* Home Footer Container */
 .homeFooterNav {
   display: flex;
   align-items: center;
-  
-  padding: 15px 10px;
+  margin-top: 15px;
+  padding: 5px;
   background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  border-block: 2px solid #e0e0e0;
   max-width: 100%;
 }
 
@@ -136,7 +131,7 @@ body {
 .footerLogo img {
   height: auto;       
   width: 200px;  
-  border-bottom: 1px solid #e0e0e0;      
+  border-bottom: 2px solid #e0e0e0;      
 }
 
 /* Footer Links */
@@ -144,7 +139,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 50px;
+  padding-left: 100px;
   width: 100%;
 }
 
@@ -165,8 +160,23 @@ body {
   color: #555555;
 }
 
+/* Standard Footer Container */
+.standardFooterNav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 2px solid #e0e0e0;
+  max-width: 100%;
+}
+
+.trademark {
+  display: block;
+}
+
 /* Responsive Media Query for Tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .topnav {
     flex-wrap: wrap;
     padding: 15px 20px;
