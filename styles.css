@@ -90,7 +90,7 @@
 }
 
 /* Cart Button */
-.cart-btn {
+.cartBtn {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -103,10 +103,66 @@
   transition: background-color 0.2s ease;
 }
 
-.cart-btn:hover {
+.cartBtn:hover {
   background-color: #4F7395;
 }
 
+/* Title Tagline */
+.tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagline h2 {
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+/* small Horizontal page break line */
+.centreLine {
+  width: 300px;       
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+/* Staiatonary Picture gallery */
+.sampleGallery {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 80px;
+}
+
+.sampleGallery img {
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+/* Shop Now Button */
+.shopNowBtnContainer {
+ display: flex;
+ justify-content: center;
+}
+
+.shopNowBtn {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.shopNowBtn:hover {
+  background-color: #4F7395;
+}
 
 /* Home Footer Container */
 .homeFooterNav {
