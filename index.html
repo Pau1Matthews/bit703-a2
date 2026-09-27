@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
@@ -44,22 +45,83 @@
 
 <main class="main">
 
+  <!-- Title Tagline -->
   <div class="tagline">
     <h2>Premium New Zealand Outdoor Equipment <br> for The Outdoor Enthusiast</h2>
   </div>
 
+  <!-- Small Horizontal line -->
   <hr class="centreLine">
 
+  <!-- Staitionary Gallery -->
   <div class="sampleGallery">
-    <img src="images/019065_bla_water_resistant_glove_acc_ss24_01.webp" alt="Gloves" width="250">
-    <img src="images/034060_bro_odyssey_wms_waterproof_extreme_vibram_hiking_boot_ftw_ss24_01.webp" alt="Hiking Boots" width="250">
-    <img src="images/053102_dbl_thunderstorm_ii_3_in_1_waterproof_jacket_ecom_lifestyle_aw24_01.webp" alt="Jacket" width="250">
+    <img src="images/01 gloves.jpg" alt="Gloves" width="250">
+    <img src="images/02 hiking_boot.jpg" alt="Hiking Boots" width="250">
+    <img src="images/03 waterproof_jacket.jpg" alt="Jacket" width="250">
   </div>
 
   <!-- Shop Now Button -->
   <div class="shopNowBtnContainer">
     <a href="#" class="shopNowBtn">Shop Now</a>
   </div>
+
+
+  <!-- Product Carousel -->
+
+ <div data-bs-theme="dark" id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carouselGallery">
+      <div class="carouselCard">
+    <img src="images/01 gloves.jpg" alt="Gloves" width="250">
+    <h3>Gloves</h3>
+    <h3>$100</h3> 
+      </div>
+      <div class="carouselCard">
+    <img src="images/02 hiking_boot.jpg" alt="Hiking Boots" width="250">
+    <h3>Hiking Boots</h3>
+    <h3>$299</h3> 
+      </div>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carouselGallery">
+        <div class="carouselCard">
+    <img src="images/03 waterproof_jacket.jpg" alt="Jacket" width="250">
+    <h3>Waterproof Jacket</h3>
+    <h3>$150</h3> 
+    </div>
+    <div class="carouselCard">
+    <img src="images/04 thermal_ski_sock.jpg" alt="Ski Sock" width="250">
+    <h3>Thermal Sock</h3>
+    <h3>$45</h3> 
+    </div>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carouselGallery">
+        <div class="carouselCard">
+    <img src="images/05 waterproof_ski.jpg" alt="Waterproof Ski Pants" width="250">
+    <h3>Waterproof Ski Pants</h3>
+    <h3>$199</h3> 
+    </div>
+    <div class="carouselCard">
+    <img src="images/06 sleeping_bag.jpg" alt="Sleeping Bag" width="250">
+    <h3>Sleeping Bag</h3>
+    <h3>$250</h3> 
+    </div>
+  </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 </main>
 
@@ -124,6 +186,6 @@
        
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
