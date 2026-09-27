@@ -25,14 +25,14 @@
 }
 
 /* Search Bar Container */
-.search-container {
+.searchContainer {
   position: relative;
   flex-grow: 2;
   max-width: 450px; 
 }
 
 /* Search Bar text input */
-.search-container input {
+.searchContainer input {
   width: 80%;
   padding: 8px 1px 8px 35px;
   border: 1px solid #b0b0b0;
@@ -42,12 +42,12 @@
   outline: none;
 }
 
-.search-container input::placeholder {
+.searchContainer input::placeholder {
   color: #b0b0b0;
 }
 
 /* Search Bar icon container */
-.search-container .search-icon {
+.searchContainer .search-icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -112,7 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 .tagline h2 {
@@ -128,7 +128,7 @@
   margin: 0 auto;      
 }
 
-/* Staiatonary Picture gallery */
+/* Stationary Picture gallery */
 .sampleGallery {
   display: flex;
   justify-content: center;
@@ -148,6 +148,7 @@
  display: flex;
  justify-content: center;
  padding: 30px;
+ border-bottom: 2px solid #e0e0e0;
 }
 
 .shopNowBtn {
@@ -171,8 +172,8 @@
 .carouselGallery {
   display: flex;
   justify-content:space-evenly;
-  padding: 50px;
-  
+  padding: 10px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .carouselGallery img {
@@ -188,6 +189,50 @@
   justify-content: center;
 }
 
+
+/* NewsletterBanner */
+.newsLetterBanner {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 80px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.newsLetterSubscribeForm {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.emailContainer {
+  position: relative;
+  flex-grow: 2;
+}
+
+.subscribeBtn {
+  display: inline-flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  background-color: #4F7395;
+}
+
+/* Reviewed Products */
+.reviewedProducts {
+  border-bottom: 2px solid #e0e0e0;
+}
+
 /* Home Footer Container */
 .homeFooterNav {
   display: flex;
@@ -195,7 +240,7 @@
   margin-top: 15px;
   padding: 5px;
   background-color: #ffffff;
-  border-block: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   max-width: 100%;
 }
 
