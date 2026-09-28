@@ -278,16 +278,24 @@
 }
 
 .star-rating-static {
-  font-size: 2rem; /* Adjust size of the stars */
+  font-size: 2rem; 
   display: inline-block;
 }
 
 .star-rating-static .star.filled {
-  color: #ffcc00; /* Gold/yellow color for filled stars */
+  color: #ffcc00; 
 }
 
 .star-rating-static .star.empty {
-  color: #ccc; /* Light gray for empty stars */
+  color: #ccc; 
+}
+
+/* About store */
+.about {
+  padding: 50px;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
 }
 
 /* Home Footer Container */
@@ -359,7 +367,7 @@
 
 /* Responsive Media Query for Tablets */
 @media screen and (max-width: 950px) {
-  .topnav {
+  .topNav {
     flex-wrap: wrap;
     padding: 15px 20px;
   }
@@ -382,4 +390,16 @@
   .nav-links a {
     font-size: 16px;
   }
+
+  .newsLetterBanner {
+    flex-wrap: wrap;
+  }
+
+  .productReviewTitle h5{
+    font-size: 0.8rem;
+  }
+
+  .star-rating-static {
+  font-size: 0.8rem; 
+}
 }
