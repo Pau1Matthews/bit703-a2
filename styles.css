@@ -1,6 +1,6 @@
 
 /* Main Navigation Bar Container */
-.topnav {
+.topNav {
   display: flex;
   align-items: center;
   justify-content: space-around;
