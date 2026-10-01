@@ -447,6 +447,111 @@
   border-bottom: 2px solid #e0e0e0;
 }
 
+/* Advertisement Container */
+.advertisement-containers {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 2px solid #e0e0e0;
+  width: 100%;
+}
+
+.large-logo-container img{
+  height: auto;
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  min-height: 300px; 
+  border-bottom: 2px solid #e0e0e0;
+  border-left: 2px solid #e0e0e0;
+}
+
+.newsletter-title {
+  font-family: 'Montserrat';
+  padding-left: 20px;
+}
+
+.news-letter-subscribe-form-large {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 80%;
+}
+
+.email-container-large {
+  position: relative;
+  flex-grow: 2;
+  width: 200px;
+  margin: 20px;
+}
+
+.email-container-large input[type="email"] {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 15px;   
+}
+
+.product-spotlight-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;   
+  min-height: 300px; 
+}
+
+.subscribe-btn-large {
+  display: inline-flex;
+  justify-content: center;
+  width: 200px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-btn-large:hover {
+  background-color: #4F7395;
+}
+
+.news-description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.reviewed-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 50px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.reviewed-product-small-card {
+  display: flex;
+  padding: 10px;
+}
+
+.reviewed-product-small-card img{
+  border: 2px solid #e0e0e0;
+  max-height: auto;
+  width: 100px;
+}
+
+.small-card-details{
+  margin: 20px;
+}
+
+
 /* Footer Styles ............................................. */
 
 /* Home Footer Container */
@@ -559,4 +664,29 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .advertisement-containers {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  .email-container-large input[type="email"] {
+  width: 100%;
+  font-size: 0.8rem; 
+  }
+
+  .subscribe-btn-large {
+  display: inline-flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  }
+
 }
