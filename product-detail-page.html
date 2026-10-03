@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aotearoa Adventure Gear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,12 +38,123 @@
   </header>
 
 <main class="main">
-<div itemscope itemtype="https://schema.org/Book">
-        <h1 itemprop="name">The Lord of the Rings: The Fellowship of the Ring</h1>
 
-        <span>Author: <span itemprop="author">J.R.R. Tolkien</span> (born January 3, 1892)</span>
+<!-- Product View -->
+<div class="product-view">
+  <div class="product-image-container">
+    <img src="images/02 hiking_boot.jpg" alt="Hiking Boots">
+  </div>
+  <div class="product-details-container">
+    <h1>Hiking Boots</h1>
+    <div class="review-container">
+      <div class="star-rating-static">
+        <span class="star-filled">★</span>
+        <span class="star-filled">★</span>
+        <span class="star-filled">★</span>
+        <span class="star-filled">★</span>
+        <span class="star-empty">★</span>
+      </div>
+      <p>5 Reviews</p>
+    </div>
 
-        <span itemprop="genre">Fantasy fiction</span>
+    <!-- Medium Horizontal line -->
+    <hr class="medium-centre-line">
+
+    <div class="price-container">
+      <h1>$299.00</h1>
+
+      <select class="model-select" id="model">
+      <option value="" disabled selected>Select model</option>
+      <option value="Black">Black</option>
+      <option value="Beige">Beige</option>
+      <option value="Green">Green</option>
+      </select>
+    </div>
+
+    <!-- Medium Horizontal line -->
+    <hr class="medium-centre-line">
+
+    <p>No puddle or stream crossing stands in your way. Featuring a seamless waterproof liner,
+       this boot keeps water out while letting your feet breathe to avoid sweat buildup. 
+       The reinforced rubber toe bumper shields your feet from hidden roots and jagged rocks, 
+       while the specialized outsole locks onto slippery surfaces.</p>
+
+    <!-- Small Horizontal line -->
+    <div class="small-centre-line-container">
+      <hr class="small-centre-line">
+    </div>
+
+    <!-- Add to Cart Button -->
+    <div class="add-cart-btn-container">
+      <a href="shopping-cart-page.html" class="add-cart-btn">Add To Cart</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="similar-products-banner">
+  <div class="tag-line">
+    <h1>Similar Products</h1>
+  </div>
+
+  <div class="similar-products-items">
+    <div class="similar-product-card">
+      <a href="product-detail-page.html" class="product-link">
+        <img src="images/04 thermal_ski_sock.jpg" alt="Thermal Socks">
+      </a>
+      <div class="similar-product-card-details">
+        <h5 style="font-size: 1em;">Thermal Socks</h5>
+        <div class="star-rating-static">
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-empty">★</span>
+        </div>
+        <p>$45</p>
+      </div>
+    </div>
+
+    <div class="similar-product-card">
+      <a href="product-detail-page.html" class="product-link">
+        <img src="images/01 gloves.jpg" alt="Gloves">
+      </a>
+      <div class="similar-product-card-details">
+        <h5 style="font-size: 1em;">Gloves</h5>
+        <div class="star-rating-static">
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-empty">★</span>
+        </div>
+        <p>$100</p>
+      </div>
+    </div>
+
+    <div class="similar-product-card">
+      <a href="product-detail-page.html" class="product-link">
+        <img src="images/03 waterproof_jacket.jpg" alt="Jacket">
+      </a>
+      <div class="similar-product-card-details">
+        <h5 style="font-size: 1em;">Jacket</h5>
+        <div class="star-rating-static">
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-filled">★</span>
+          <span class="star-empty">★</span>
+        </div>
+        <p>$150</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-banner">
+    
+  </div>
+</div>
+
 </main>
 
 <!-- Footer -->

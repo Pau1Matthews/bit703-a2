@@ -39,6 +39,11 @@
   text-align: center;
 }
 
+.tag-line h1 {
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
 
 /* Right Side Wrap (Links + Cart) */
 .nav-right {
@@ -128,7 +133,7 @@
 }
 
 
-/* small Horizontal page break line */
+/* Horizontal page break line */
 .centre-line {
   width: 300px;       
   border: none;        
@@ -148,6 +153,10 @@
   max-width: 100%;
   min-width: 0;
   height: auto;
+}
+
+.sample-gallery :hover {
+  transform: scale(1.02); 
 }
 
 
@@ -195,6 +204,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.carousel-card :hover {
+  transform: scale(1.02); 
 }
 
 /* NewsletterBanner */
@@ -259,22 +272,32 @@
   justify-content: center;
 }
 
-.single-product-column img {
+.single-product-column .product-link {
   flex: 1;
   height: 80%; 
+  padding: 5px;
   border: 2px solid #e0e0e0;      
 }
 
-.double-product-column img {
+.double-product-column .product-link {
   flex: 1;            
   height: 30%;  
+  padding: 5px;
   border: 2px solid #e0e0e0;     
 }
 
-.reviewed-products img {
+ .reviewed-products .product-link img {
   width: 100%;
   max-height: 100%;
   object-fit: contain;   
+}
+
+.single-product-column .product-link :hover {
+  transform: scale(1.02); 
+}
+
+.double-product-column .product-link :hover {
+  transform: scale(1.02); 
 }
 
 .product-review-description {
@@ -409,11 +432,6 @@
   transition: all 0.3s ease;
 }
 
-.category-card:hover .card-text {
-  color: #ff5722;       
-  font-weight: bold;    
-  letter-spacing: 1px;  
-}
 
 .category-card:hover {
   transform: scale(1.02); 
@@ -541,6 +559,10 @@
   padding: 10px;
 }
 
+.small-card-link :hover {
+  transform: scale(1.02); 
+}
+
 .reviewed-product-small-card img{
   border: 2px solid #e0e0e0;
   max-height: auto;
@@ -551,6 +573,118 @@
   margin: 20px;
 }
 
+/* Product Deatail Page Styles ................................... */
+
+.product-view {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.product-details-container {
+  padding: 30px;
+  border-left: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.review-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Medium Horizontal line */
+.centre-line {
+  width: 60%;       
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.model-select {
+  width: 50%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Samll Horizontal line */
+.small-centre-line-container{
+  display: grid;
+  justify-content: left;
+}
+
+.small-centre-line {
+  width: 200px;     
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+.add-cart-btn-container {
+  display: grid;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.add-cart-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #4F7395;
+}
+
+.similar-products-items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 50px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.similar-product-card {
+  display: flex;
+  padding: 10px;
+}
+
+.similar-product-card .product-link :hover {
+  transform: scale(1.02); 
+}
+
+
+.similar-product-card img{
+  border: 2px solid #e0e0e0;
+  max-height: auto;
+  width: 150px;
+}
+
+.similar-product-card-details{
+  margin: 20px;
+}
+
+.similar-products-banner {
+  border-bottom: 2px solid #e0e0e0;
+}
 
 /* Footer Styles ............................................. */
 
