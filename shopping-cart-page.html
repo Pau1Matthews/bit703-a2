@@ -28,19 +28,110 @@
       </nav>
       
       <!-- Cart Button -->
-      <a href="#" class="cart-btn">
+      <a href="shopping-cart-page.html" class="cart-btn">
         <img src="images/cart.svg" alt=""> Your Cart
       </a>
     </div>
   </header>
 
 <main class="main">
-<div itemscope itemtype="https://schema.org/Book">
-        <h1 itemprop="name">The Lord of the Rings: The Fellowship of the Ring</h1>
 
-        <span>Author: <span itemprop="author">J.R.R. Tolkien</span> (born January 3, 1892)</span>
+  <div class="checkout-page-status">
+    <div class="status-card-current">
+      <h2>1.Shopping Cart</h2>
+    </div>
+    <div class="status-card-other">
+      <h2>2. Shipping Details</h2>
+    </div>
+    <div class="status-card-other">
+      <h2>3. Payment Options</h2>
+    </div>  
+  </div>
 
-        <span itemprop="genre">Fantasy fiction</span>
+  <!-- Cart Details -->
+
+  <div class="cart-details">
+    <div class="cart-column">
+      <div class="cart-title">
+        <h1>Shopping Cart</h1>
+      </div>
+      <div class="cart-items">
+        <div class="cart-item-img">
+          <img src="images/05 waterproof_ski.jpg" alt="Ski Pants" width="100">
+        </div>
+        <div class="cart-item-details">
+          <div class="cart-item-name">
+            <h2>Ski Pants</h2>
+          </div>
+          <div class="cart-item-description">
+            <div class="item-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <h2>$199</h2>
+            </div>
+            <div class="quantity-selection">
+              <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" step="1" aria-label="quantity">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-items">
+        <div class="cart-item-img">
+          <img src="images/02 hiking_boot.jpg" alt="Hiking Boots" width="100">
+        </div>
+        <div class="cart-item-details">
+          <div class="cart-item-name">
+            <h2>Hiking Boots</h2>
+          </div>
+          <div class="cart-item-description">
+            <div class="item-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+              <h2>$299</h2>
+            </div>
+            <div class="quantity-selection">
+              <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" step="1" aria-label="quantity">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="summary-column">
+      <div class="cart-title">
+        <h1>Summary</h1>
+      </div>
+      <div class="coupon-conatiner">
+        <h2>ENTER COUPON CODE</h2>
+      </div>
+      <div class="amounts-container">
+        <div class="amounts">
+          <span>SUBTOTAL</span>
+          <span>$498</span>
+        </div>
+        <div class="amounts">
+          <span>SHIPPING</span>
+          <span>FREE</span>
+        </div>
+        <div class="amounts">
+          <span>TAXES</span>
+          <span>$15</span>
+        </div>
+      </div>
+      <div class="amounts">
+        <h1><span>TOTAL</span></h1>
+        <h1><span>$513</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <div class="next-btn-container-large">
+      <a href="shipping-details-page.html" class="next-btn-large">Next</a>
+    </div>
+
+    <div class="cancel-btn-container-large">
+      <a href="shop-page.html" class="cancel-btn-large">Cancel</a>
+    </div>
+  </div>
+
 </main>
 
 <!-- Footer -->
