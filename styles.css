@@ -759,7 +759,7 @@
   margin: 5px;
 }
 
-.cart-items {
+.cart-item {
   display: grid;
   grid-template-columns: 1fr 3fr;
   justify-content: center;
@@ -793,6 +793,7 @@
 .amounts {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0px;
 }
 

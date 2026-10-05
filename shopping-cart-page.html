@@ -55,7 +55,7 @@
       <div class="cart-title">
         <h1>Shopping Cart</h1>
       </div>
-      <div class="cart-items">
+      <div class="cart-item">
         <div class="cart-item-img">
           <img src="images/05 waterproof_ski.jpg" alt="Ski Pants" width="100">
         </div>
@@ -66,15 +66,15 @@
           <div class="cart-item-description">
             <div class="item-description">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-              <h2>$199</h2>
+              <h2><span>$<span class="item-total">199.00</span></span></h2>
             </div>
             <div class="quantity-selection">
-              <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" step="1" aria-label="quantity">
+               <input type="number" class="quantity" value="1" min="0" data-price="199.00">
             </div>
           </div>
         </div>
       </div>
-      <div class="cart-items">
+      <div class="cart-item">
         <div class="cart-item-img">
           <img src="images/02 hiking_boot.jpg" alt="Hiking Boots" width="100">
         </div>
@@ -85,10 +85,10 @@
           <div class="cart-item-description">
             <div class="item-description">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-              <h2>$299</h2>
+              <h2><span>$<span class="item-total">299.00</span></span></h2>
             </div>
             <div class="quantity-selection">
-              <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" step="1" aria-label="quantity">
+               <input type="number" class="quantity" value="1" min="0" data-price="299.00">
             </div>
           </div>
         </div>
@@ -104,23 +104,78 @@
       <div class="amounts-container">
         <div class="amounts">
           <span>SUBTOTAL</span>
-          <span>$498</span>
+          <div class="subtotal-section">$<span id="sub-total"></span></div>
         </div>
         <div class="amounts">
           <span>SHIPPING</span>
-          <span>FREE</span>
+          <div class="shipping-section">$<span id="shipping-total">50.00</span></div>
         </div>
         <div class="amounts">
           <span>TAXES</span>
-          <span>$15</span>
+          <div class="tax-section">$<span id="tax-total"></span></div>
         </div>
       </div>
       <div class="amounts">
         <h1><span>TOTAL</span></h1>
-        <h1><span>$513</span></h1>
+        <div class="total-section">$<span id="grand-total"></span></div>
       </div>
     </div>
   </div>
+
+  <script>
+        // Select all quantity inputs
+        const quantityInputs = document.querySelectorAll('.quantity');
+        const subTotalElement = document.getElementById('sub-total');
+        const shippingElement = document.getElementById('shipping-total');
+        const taxElement = document.getElementById('tax-total');
+        const grandTotalElement = document.getElementById('grand-total');
+
+        // Function to calculate and update totals
+        function updateTotals() {
+            let subTotal = 0;
+            let shippingTotal =50;
+
+            quantityInputs.forEach(input => {
+                // Get the current quantity and the price hidden in the data attribute
+                const quantity = parseInt(input.value) || 0;
+                const price = parseFloat(input.getAttribute('data-price'));
+                
+                // Calculate line total
+                const itemTotal = quantity * price;
+                
+                // Find the nearest subtotal span for this specific item and update it
+                const itemTotalElement = input.closest('.cart-item').querySelector('.item-total');
+                itemTotalElement.textContent = itemTotal.toFixed(2);
+
+                // Add to the running grand total
+                subTotal += itemTotal;
+
+            });
+
+              //Calculate shipping
+              shippingTotal = subTotal > 600 ? 0 : 50;
+
+              // Calculate tax 
+              const taxRate = 0.15; 
+              const taxTotal = (subTotal + shippingTotal) * taxRate;
+
+              // Calculate Grand Total
+              const grandTotal = subTotal + shippingTotal + taxTotal;
+
+            // Update the grand total display
+            subTotalElement.textContent = subTotal.toFixed(2);
+            shippingElement.textContent = shippingTotal;
+            taxElement.textContent = taxTotal;
+            grandTotalElement.textContent = grandTotal;
+        }
+
+        // Add 'input' event listener to all quantity fields for real-time tracking
+        quantityInputs.forEach(input => {
+            input.addEventListener('input', updateTotals);
+        });
+
+        updateTotals();
+    </script>
 
   <div class="action-buttons">
     <div class="next-btn-container-large">
