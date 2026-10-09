@@ -56,74 +56,124 @@
       <div class="shipping-title">
         <h1>Shipping Details</h1>
       </div>
-      <div class="customer-form-container">
-        <form id="form" class="form">
-      <h2>Register With Us</h2>
-      <div class="form-control">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter username">
-        <small>Error Message</small>
-      </div>
-      <div class="form-control">
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter email">
-        <small>Error Message</small>
-      </div>
-      <div class="form-control">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password">
-        <small>Error Message</small>
-      </div>
-      <div class="form-control">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" placeholder="Enter password again">
-        <small>Error Message</small>
-      </div>
-      <button>Register</button>
-    </form>
-      </div>
-      <div class="shipping-selection">
 
-      </div>
+    <form id="shipping-form" class="shipping-form">
+        <!-- Name Row -->
+        <div class="form-row two-columns">
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+        </div>
+
+        <!-- Address Fields -->
+        <div class="form-row">
+            <input type="text" id="address" placeholder="Address" required>
+        </div>
+        <div class="form-row">
+            <input type="text" id="address2" placeholder="Address 2">
+        </div>
+
+        <!-- Country / City Row -->
+        <div class="form-row two-columns">
+            <div class="select-wrapper">
+                <select id="country" required>
+                    <option value="" disabled selected hidden>Country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                </select>
+            </div>
+            <input type="text" id="city" placeholder="City" required>
+        </div>
+
+        <!-- Zip / Phone Row -->
+        <div class="form-row two-columns">
+            <input type="text" id="zip-code" placeholder="Zip/Postal Code" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Shipping Options -->
+        <div class="form-row shipping-options">
+            <label class="shipping-box" id="free-shipping-box">
+                <input type="checkbox" name="shipping-method" id="free-shipping-btn" value="free">
+                <div class="checkbox-content">
+                    <span class="title">Free Shipping</span>
+                    <span class="subtext">Between 2 - 5 working days</span>
+                </div>
+            </label>
+
+            <label class="shipping-box" id="next-day-box">
+                <input type="checkbox" name="shipping-method" value="next-day">
+                <div class="checkbox-content">
+                    <span class="title">Next Day Delivery - $20</span>
+                    <span class="subtext">24 hours from checkout</span>
+                </div>
+            </label>
+        </div>
+
+         <!-- Navigation Buttons -->
+    
+        <div class="action-buttons">
+          <div class="next-btn-container-large">
+            <button type="submit" id="btn-next" class="next-btn-large">Next</button>
+          </div>
+
+          <div class="cancel-btn-container-large">
+            <button type="button" class="cancel-btn-large" onclick="history.back()">Go Back</button>
+          </div>
+        </div> 
+
+    </form>
     </div>
+
     <div class="shipping-summary-column">
       <div class="summary-title">
         <h1>Summary</h1>
       </div>
       <div class="items-grid">
         <div class="shipping-item-image">
-
+          <img src="images/05 waterproof_ski.jpg" alt="Ski Pants" width="100">
         </div>
         <div class="shipping-item-details">
-
+          <h3>Ski Pants</h3>
+          <h3><span>$<span class="item-total">199.00</span></span></h3>
         </div>
+        <div class="shipping-item-image">
+          <img src="images/02 hiking_boot.jpg" alt="Hiking Boots" width="100">
+        </div>
+        <div class="shipping-item-details">
+          <h3>Hiking Boots</h3>
+          <h3><span>$<span class="item-total">299.00</span></span></h3>
+        </div>
+      </div>
         <div class="voucher">
-
+          <h3>HAVE A VOUCHER?</h3>
         </div>
         <div class="shipping-totals">
-
+          <div class="amounts">
+          <span>SUBTOTAL</span>
+          <div class="subtotal-section">$<span id="sub-total"></span></div>
+        </div>
+        <div class="amounts">
+          <span>SHIPPING</span>
+          <div class="shipping-section">$<span id="shipping-total">50.00</span></div>
+        </div>
+        <div class="amounts">
+          <span>TAXES</span>
+          <div class="tax-section">$<span id="tax-total"></span></div>
+        </div>
+      </div>
+      <div class="amounts">
+        <h1><span>TOTAL</span></h1>
+        <div class="total-section">$<span id="grand-total"></span></div>
+      </div>
         </div>
         <div class="shipping-grand-total">
 
         </div>
-      </div>
     </div>
   </div>
 
-    
-
-
-   <!-- Navigation Buttons -->
-    
-  <div class="action-buttons">
-    <div class="next-btn-container-large">
-      <a href="payment-options-page.html" class="next-btn-large">Next</a>
-    </div>
-
-    <div class="cancel-btn-container-large">
-      <a href="shopping-cart-page.html" class="cancel-btn-large">Back</a>
-    </div>
-  </div> 
 
 
 </main>

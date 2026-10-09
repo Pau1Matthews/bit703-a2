@@ -5,6 +5,7 @@
         const shippingElement = document.getElementById('shipping-total');
         const taxElement = document.getElementById('tax-total');
         const grandTotalElement = document.getElementById('grand-total');
+        const submitButton = document.getElementById("btn-next");
 
         // Function to calculate and update totals
         function updateTotals() {
@@ -40,9 +41,9 @@
 
             // Update the grand total display
             subTotalElement.textContent = subTotal.toFixed(2);
-            shippingElement.textContent = shippingTotal;
-            taxElement.textContent = taxTotal;
-            grandTotalElement.textContent = grandTotal;
+            shippingElement.textContent = shippingTotal.toFixed(2);
+            taxElement.textContent = taxTotal.toFixed(2);
+            grandTotalElement.textContent = grandTotal.toFixed(2);
         }
 
         // Add 'input' event listener to all quantity fields for real-time tracking
@@ -51,4 +52,18 @@
         });
 
         updateTotals();
+
+
+        submitButton.addEventListener("click", () => {
+            goToNextPage()
+        });
+
+        function goToNextPage(){
+            
+            const subTotal = document.getElementById("sub-total").textContent;
+            const shippingTotal = document.getElementById("shipping-total").textContent;
+            sessionStorage.setItem ("subTotal", subTotal);
+            sessionStorage.setItem ("shippingTotal", shippingTotal);
+            window.location.href = "shipping-details-page.html";
+        }
     
