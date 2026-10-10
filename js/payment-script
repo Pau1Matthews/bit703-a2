@@ -52,23 +52,4 @@ document.getElementById("grand-total").textContent = grandTotal;
         });
     }
 
-      
-        // Submit Logic 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = {
-            firstName: document.getElementById('first-name').value,
-            lastName: document.getElementById('last-name').value,
-            address: document.getElementById('address').value,
-            address2: document.getElementById('address2').value,
-            country: document.getElementById('country').value,
-            city: document.getElementById('city').value,
-            zipCode: document.getElementById('zip-code').value,
-            phone: document.getElementById('phone').value,
-        };
-
-        console.log('Form Submitted successfully:', formData);
-        goToNextPage()
-    });
 })
