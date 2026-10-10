@@ -7,6 +7,27 @@ document.getElementById("sub-total").textContent = subTotal;
   document.getElementById("sub-total").textContent = "error";
 }
 
+const shippingTotal = sessionStorage.getItem("shippingTotal");
+if (shippingTotal !== null && shippingTotal !== undefined && shippingTotal !== "undefined"){
+document.getElementById("shipping-total").textContent = shippingTotal;
+} else {
+  document.getElementById("shipping-total").textContent = "error";
+}
+
+const taxTotal = sessionStorage.getItem("taxTotal");
+if (taxTotal !== null && taxTotal !== undefined && taxTotal !== "undefined"){
+document.getElementById("tax-total").textContent = taxTotal;
+} else {
+  document.getElementById("tax-total").textContent = "error";
+}
+
+const grandTotal = sessionStorage.getItem("grandTotal");
+if (grandTotal !== null && grandTotal !== undefined && grandTotal !== "undefined"){
+document.getElementById("grand-total").textContent = grandTotal;
+} else {
+  document.getElementById("grand-total").textContent = "error";
+}
+
   const form = document.getElementById('payment-form');
   const paymentBoxes = document.querySelectorAll('.payment-box');
   
