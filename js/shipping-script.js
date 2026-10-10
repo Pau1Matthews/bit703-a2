@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ window.addEventListener('pageshow', function(event) {
     const form = document.getElementById('shipping-form');
     const shippingBoxes = document.querySelectorAll('.shipping-box');
   
@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateTotal();
         });
 
-    // Submit Logic 
+      
+        // Submit Logic 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -40,14 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
             city: document.getElementById('city').value,
             zipCode: document.getElementById('zip-code').value,
             phone: document.getElementById('phone').value,
-            shippingMethod: document.querySelector('input[name="shipping-method"]:checked').value
         };
 
         console.log('Form Submitted successfully:', formData);
-        alert('Proceeding to next step!');
+        goToNextPage()
     });
 
-});
+    });
+
 
 const subTotal = sessionStorage.getItem("subTotal");
 if (subTotal !== null && subTotal !== undefined && subTotal !== "undefined"){
@@ -63,6 +64,8 @@ document.getElementById("shipping-total").textContent = shippingTotal;
   document.getElementById("shipping-total").textContent = "error";
 }
 
+const taxTotal = 0;
+const grandTotal = 0;
 
 function updateShippingStatus() {
     const freeShippingBox = document.getElementById('free-shipping-box');
@@ -137,3 +140,17 @@ updateShippingStatus();
 
 calculateTotal();
 
+function goToNextPage(){
+            
+    const subTotal = document.getElementById("sub-total").textContent;
+    const shippingTotal = document.getElementById("shipping-total").textContent;
+    const taxTotal = document.getElementById("tax-total").textContent;   
+    const grandTotal = document.getElementById("grand-total").textContent;
+        sessionStorage.setItem ("subTotal", subTotal);
+        sessionStorage.setItem ("shippingTotal", shippingTotal);
+        sessionStorage.setItem ("taxTotal", taxTotal);
+        sessionStorage.setItem ("grandTotal", grandTotal);
+
+        window.location.href = "payment-options-page.html";
+}
+    

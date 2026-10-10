@@ -1,0 +1,119 @@
+/* Shooping Cart Styles ............................................. */
+.checkout-page-status {
+  background-color: #D0F0C0;
+  display: flex;
+  justify-content: center;
+}
+
+.status-card-current {
+  padding: 10px 50px;
+  margin: 20px 0px;
+  border-bottom: 2px solid;
+}
+
+.status-card-other {
+  padding: 10px 50px;
+  margin: 20px 0px;
+  border-bottom: 2px solid #9e9e9e;
+}
+
+.status-card-other h2 {
+  color: #9e9e9e;
+}
+
+/* Cart Details .....................................*/
+.cart-details {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  gap: 50px;
+}
+
+.cart-title {
+  border-bottom: 2px solid #9e9e9e;
+}
+
+.cart-title h1 {
+  margin: 5px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px 0px;
+}
+
+.cart-item-img img{
+  border: 2px solid #e0e0e0;
+  max-height: auto;
+  width: 70%;
+}
+
+.cart-item-description {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.cart-column {
+  border-bottom: 2px solid #9e9e9e;
+}
+
+.coupon-container {
+  border-bottom: 2px solid #9e9e9e;
+}
+
+.amounts-container {
+  border-bottom: 2px solid #9e9e9e;
+}
+
+.amounts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.next-btn-large {
+  display: inline-flex;
+  justify-content: center;
+  width: 200px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.next-btn-large:hover {
+  background-color: #4F7395;
+}
+
+.cancel-btn-large {
+  display: inline-flex;
+  justify-content: center;
+  width: 200px;
+  background-color: #9e9e9e;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn-large:hover {
+  background-color: #4F7395;
+}

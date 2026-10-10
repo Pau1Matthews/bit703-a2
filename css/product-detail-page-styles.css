@@ -1,0 +1,157 @@
+/* Product Detail Page Styles ................................... */
+
+.product-view {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.product-details-container {
+  padding: 30px;
+  border-left: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.review-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Medium Horizontal line */
+.centre-line {
+  width: 60%;       
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.model-select {
+  width: 50%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Samll Horizontal line */
+.small-centre-line-container{
+  display: grid;
+  justify-content: left;
+}
+
+.small-centre-line {
+  width: 200px;     
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+.add-cart-btn-container {
+  display: grid;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.add-cart-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #4F7395;
+}
+
+
+/* Similar Products Banner Style */
+.similar-products-items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 50px;
+}
+
+.similar-product-card {
+  display: flex;
+  padding: 10px;
+}
+
+.similar-product-card .product-link :hover {
+  transform: scale(1.02); 
+}
+
+
+.similar-product-card img{
+  border: 2px solid #e0e0e0;
+  max-height: auto;
+  width: 150px;
+}
+
+.similar-product-card-details{
+  margin: 20px;
+}
+
+.similar-products-banner {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Reviews Banner Style */
+.reviews-banner {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.review-title {
+  font-family: 'Montserrat';
+  padding-left: 20px;
+}
+
+.review-card {
+  display: flex;
+}
+
+.user-icon img{
+  padding: 40px;
+  height: 50px;
+}
+
+.user-detail {
+  margin-right: 30px;
+}
+.user-detail .star-rating-static {
+  font-size: 1rem; 
+  }
+
+.review {
+  width: 60%;
+  margin: 30px;
+}
+
+.star-rating-static {
+  font-size: 2rem; 
+  display: inline-block;
+}
+
+.star-rating-static .star-filled {
+  color: #ffcc00; 
+}
+
+.star-rating-static .star-empty {
+  color: #ccc; 
+}

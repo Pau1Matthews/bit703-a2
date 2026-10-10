@@ -1,0 +1,325 @@
+
+
+
+/* Home Page Styles .................................. */
+
+
+.floating-anchor {
+  position: fixed;
+  font-size: 25px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+  background-color: #2A4446;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.floating-anchor:hover {
+  background-color: #4F7395;
+}
+
+/* Search Bar Container */
+.search-container {
+  position: relative;
+  flex-grow: 2;
+  max-width: 450px; 
+  box-sizing: border-box;
+}
+
+/* Search Bar text input */
+.search-container input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 1px 8px 35px;
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #757575;
+  outline: none;
+}
+
+.search-container input::placeholder {
+  color: #b0b0b0;
+  
+}
+
+/* Search Bar icon container */
+.search-container .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+
+/* Horizontal page break line */
+.centre-line {
+  width: 300px;       
+  border: none;        
+  border-top: 2px solid #e0e0e0; 
+  margin: 0 auto;      
+}
+
+/* Stationary Picture gallery */
+.sample-gallery {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 80px;
+}
+
+.sample-gallery img {
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.sample-gallery :hover {
+  transform: scale(1.02); 
+}
+
+
+/* Shop Now Button */
+.shop-now-btn-container {
+ display: flex;
+ justify-content: center;
+ padding: 30px;
+ border-bottom: 2px solid #e0e0e0;
+}
+
+.shop-now-btn {
+  display: inline-flex;
+  justify-content: center;
+  width: 150px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #4F7395;
+}
+
+/* Product Carousel Card */
+.carousel-gallery {
+  display: flex;
+  justify-content:space-evenly;
+  padding: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.carousel-gallery img {
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-card :hover {
+  transform: scale(1.02); 
+}
+
+/* NewsletterBanner */
+.news-letter-banner {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 80px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.news-letter-subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.email-container {
+  position: relative;
+  flex-grow: 2;
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #4F7395;
+}
+
+/* Reviewed Products */
+.reviewed-products {
+  padding: 30px;
+  display: flex;
+  gap: 20px;         
+  width: 100%;        
+  height: 800px;      
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.product-column {
+  flex: 1;            
+  height: 100%;       
+  min-width: 0;
+}
+
+.single-product-column,
+.double-product-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;       
+  justify-content: center;
+}
+
+.single-product-column .product-link {
+  flex: 1;
+  height: 80%; 
+  padding: 5px;
+  border: 2px solid #e0e0e0;      
+}
+
+.double-product-column .product-link {
+  flex: 1;            
+  height: 30%;  
+  padding: 5px;
+  border: 2px solid #e0e0e0;     
+}
+
+ .reviewed-products .product-link img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;   
+}
+
+.single-product-column .product-link :hover {
+  transform: scale(1.02); 
+}
+
+.double-product-column .product-link :hover {
+  transform: scale(1.02); 
+}
+
+.product-review-description {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.star-rating-static {
+  font-size: 2rem; 
+  display: inline-block;
+}
+
+.star-rating-static .star-filled {
+  color: #ffcc00; 
+}
+
+.star-rating-static .star-empty {
+  color: #ccc; 
+}
+
+/* About store */
+.about {
+  padding: 50px;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+}
+
+
+
+/* Responsive Media Query for Tablets .................................... */
+@media screen and (max-width: 950px) {
+  .top-nav {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .search-container {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-container input {
+  width: 95%;
+  }
+
+  .nav-right {
+    gap: 15px;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .news-letter-banner {
+    flex-wrap: wrap;
+  }
+
+  .product-review-title h5{
+    font-size: 0.8rem;
+  }
+  .star-rating-static {
+  font-size: 0.8rem; 
+  }
+
+  .search-banner {
+    flex-wrap: wrap;
+  }
+
+  .category-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advertisement-containers {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  .email-container-large input[type="email"] {
+  width: 100%;
+  font-size: 0.8rem; 
+  }
+
+  .subscribe-btn-large {
+  display: inline-flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  }
+
+}

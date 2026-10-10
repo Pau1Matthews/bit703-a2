@@ -51,8 +51,10 @@
             input.addEventListener('input', updateTotals);
         });
 
+        window.addEventListener('pageshow', function(event) {
+        // This runs on normal load AND when navigating back via browser history
         updateTotals();
-
+        });
 
         submitButton.addEventListener("click", () => {
             goToNextPage()

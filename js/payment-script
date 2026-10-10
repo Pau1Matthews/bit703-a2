@@ -1,0 +1,53 @@
+window.addEventListener('pageshow', function(event) {
+
+const subTotal = sessionStorage.getItem("subTotal");
+if (subTotal !== null && subTotal !== undefined && subTotal !== "undefined"){
+document.getElementById("sub-total").textContent = subTotal;
+} else {
+  document.getElementById("sub-total").textContent = "error";
+}
+
+  const form = document.getElementById('payment-form');
+  const paymentBoxes = document.querySelectorAll('.payment-box');
+  
+  
+
+    paymentBoxes.forEach(box => {
+        const checkbox = box.querySelector('input[type="radio"]');
+        
+        box.addEventListener('click', () => {
+            updatePaymentHighlight();
+        });
+    });
+
+    function updatePaymentHighlight() {
+        paymentBoxes.forEach(box => {
+            const checkbox = box.querySelector('input[type="radio"]');
+            if (checkbox.checked) {
+                box.classList.add('label-active');
+            } else {
+                box.classList.remove('label-active');
+            }
+        });
+    }
+
+      
+        // Submit Logic 
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            firstName: document.getElementById('first-name').value,
+            lastName: document.getElementById('last-name').value,
+            address: document.getElementById('address').value,
+            address2: document.getElementById('address2').value,
+            country: document.getElementById('country').value,
+            city: document.getElementById('city').value,
+            zipCode: document.getElementById('zip-code').value,
+            phone: document.getElementById('phone').value,
+        };
+
+        console.log('Form Submitted successfully:', formData);
+        goToNextPage()
+    });
+})
