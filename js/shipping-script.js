@@ -31,6 +31,15 @@
         // Submit Logic 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const phoneValue = document.getElementById('phone').value.trim();
+            // Regular expression for basic phone validation (allows optional +, digits, spaces, hyphens, and parenthesis; 7-15 chars)
+        const phoneRegex = /^\+?[0-9\s\-()]{9,15}$/;
+
+        if (!phoneRegex.test(phoneValue)) {
+        alert('Please enter a valid phone number.');
+        return; // Stops execution if validation fails
+        }
         
         const formData = {
             firstName: document.getElementById('first-name').value,

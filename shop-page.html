@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/common-styles.css">
   <link rel="stylesheet" href="css/shop-page-styles.css">
+  <script src="js/shop-script.js" defer></script>
 </head>
 <body>
 
@@ -109,14 +110,15 @@
       <div class="newsletter-title">
         <h2>Newsletter</h2>
       </div>
-      <div class="news-letter-subscribe-form-large">
-        <div class="email-container-large">
-          <input type="email" placeholder="Email Address" aria-label="Email Address">
+      <form id="news-letter-subscribe-form" class="news-letter-subscribe-form">
+        <div class="email-container">
+          <input type="text" id="email" placeholder="Email Address" aria-label="Email Address">
+          <small>Error Message</small>
         </div>
-        <div class="subscribe-btn-container-large">
-        <a href="#" class="subscribe-btn-large">Subscribe</a>
-        </div>
-      </div>
+        <div class="subscribe-btn-container">
+          <button class="subscribe-btn">Subscribe</button>
+          </div>
+        </form>
     </div>
 
     <div class="product-spotlight-container">

@@ -166,25 +166,75 @@
   padding-left: 20px;
 }
 
-.news-letter-subscribe-form-large {
+.news-letter-subscribe-form {
   display: flex;
+  justify-content: flex-start;
   gap: 20px;
-  align-items: center;
+  padding: 20px;
   width: 80%;
 }
 
-.email-container-large {
+.email-container {
   position: relative;
   flex-grow: 2;
-  width: 200px;
-  margin: 20px;
 }
 
-.email-container-large input[type="email"] {
+.news-letter-subscribe-form input {
   width: 100%;
-  font-size: 1.2rem;
-  padding: 15px;   
+  font-size: 1.5rem;
 }
+
+.news-letter-subscribe-form.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-letter-subscribe-form.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-letter-subscribe-form small {
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+.news-letter-subscribe-form.success input {
+  border-color: #2ecc71;
+}
+
+.news-letter-subscribe-form.error input {
+  border-color: #e74c3c;
+}
+
+.news-letter-subscribe-form.error small {
+  visibility: visible;
+}
+
+.news-letter-subscribe-form.success small {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  justify-content: center;
+  width: 100px;
+  background-color: #2A4446;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #4F7395;
+}
+
 
 .product-spotlight-container{
   display: flex;

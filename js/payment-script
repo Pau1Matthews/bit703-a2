@@ -38,6 +38,7 @@ document.getElementById("grand-total").textContent = grandTotal;
         
         box.addEventListener('click', () => {
             updatePaymentHighlight();
+            toggleRequiredFields();
         });
     });
 
@@ -51,5 +52,30 @@ document.getElementById("grand-total").textContent = grandTotal;
             }
         });
     }
+
+  function toggleRequiredFields() {
+    const selectedMethod = document.querySelector('input[name="payment-method"]:checked').value;
+    const creditCardInputs = document.querySelectorAll(
+    '#card-number, #card-expiry-date, #card-cw, #card-holder-name');
+
+    if (selectedMethod === 'paypal') {
+      creditCardInputs.forEach(input => {
+        input.removeAttribute('required');
+      });
+    } else {
+      creditCardInputs.forEach(input => {
+        input.setAttribute('required', 'required');
+      });
+    }
+  }
+
+ // Submit Logic 
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        console.log('Form Submitted successfully:');
+        alert('Order Placed, Have a Nice Day');
+        window.location.href = "index.html";
+    });
 
 })
